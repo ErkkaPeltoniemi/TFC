@@ -8,6 +8,7 @@ public class FollowMode : MonoBehaviour
     public Vector3 relativePosition;
     private Camera _camera;
 
+    public float cameraHeight;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,8 @@ public class FollowMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _camera.transform.position = target.transform.position + relativePosition;
-        
+        var pos = target.transform.position + relativePosition;
+        pos.y = cameraHeight;
+        _camera.transform.position = pos;
     }
 }
