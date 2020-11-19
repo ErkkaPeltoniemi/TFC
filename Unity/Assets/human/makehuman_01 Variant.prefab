@@ -16,8 +16,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!64 &4133026040356339958
-MeshCollider:
+--- !u!65 &7302473534955490286
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -26,10 +26,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.1724205, y: 1.8836551, z: 0.6479747}
+  m_Center: {x: 0.014368415, y: 0.82377553, z: 0.0035921335}
 --- !u!143 &8567399349412398093
 CharacterController:
   m_ObjectHideFlags: 0
@@ -39,7 +38,7 @@ CharacterController:
   m_GameObject: {fileID: 9060006478819811520}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 1
   m_Radius: 1
@@ -60,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9251068637c25d14697d6509b434f0e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 1
 --- !u!1001 &8177114370489703825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 710e9606071365640833c06647c7f88c, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 3f747c4e3951ab043b48d970811a2e17, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f747c4e3951ab043b48d970811a2e17, type: 3}
 --- !u!1 &9060006478819811520 stripped

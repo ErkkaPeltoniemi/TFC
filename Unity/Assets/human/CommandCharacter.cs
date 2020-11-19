@@ -5,28 +5,31 @@ using UnityEngine;
 
 public class CommandCharacter : MonoBehaviour
 {
-    float playerSpeed = 1.55f;
-    float playerMaxSpeed = 0.005f;
-    float sideStepSpeed = 0.5f;
     Vector3 point;
     Plane plane;
-    CharacterController charController;
+    //CharacterController charController;
     Animator anim;
 
+
+    private Vector3 acceleration;
+    public float maxSpeed;
     public float mass;
-    private Vector3 velocity;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         point = Vector3.zero;
         plane = new Plane(Vector3.up, 0);
-        charController = GetComponent<CharacterController>();
+        //charController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        mass = 0.5f;
-        
+        rb = GetComponent<Rigidbody>();
+  
+    
 
-    }
+
+
+}
 
     private Vector3 screenPointToWorldPoint(Vector3 screenPoint)
     {
@@ -42,63 +45,75 @@ public class CommandCharacter : MonoBehaviour
         return result;
     }
 
-    void Update()
+    void FixedUpdate()
     {
 
+      
         var camera = Camera.main;
-        var move = Vector3.zero;
-
+        
         var targetPoint = screenPointToWorldPoint(Input.mousePosition);
-        targetPoint.y = charController.transform.position.y;
+        targetPoint.y = rb.transform.position.y;
         //charController.transform.LookAt(targetPoint);
         //charController.transform.rotation.Set(0f, charController.transform.rotation.y, 0f, 0f);
+        bool moveCommand = false;
 
         if (Input.GetKey(KeyCode.W))
         {
-            move += camera.transform.up * Time.deltaTime * playerSpeed;
+            acceleration +=  (camera.transform.up * Time.deltaTime * mass);
+            moveCommand = true;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            move += -camera.transform.up * Time.deltaTime * playerSpeed;
+            acceleration +=  (-camera.transform.up * Time.deltaTime * mass);
+            moveCommand = true;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            move += camera.transform.right * Time.deltaTime * playerSpeed;
+            acceleration += (camera.transform.right * Time.deltaTime * mass);
+            moveCommand = true;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            move += -camera.transform.right * Time.deltaTime * playerSpeed;
+            acceleration += (-camera.transform.right * Time.deltaTime * mass);
+            moveCommand = true;
         }
+        if (!moveCommand)
+        {
+            acceleration *= 0.95f;
+        }
+        acceleration.y = 0f;
 
-        move.y = 0f;
-
-        var moveForward = Vector3.Dot(move, charController.transform.forward);
-        var moveRight = Vector3.Dot(move, charController.transform.right);
+        acceleration = Vector3.ClampMagnitude(acceleration, maxSpeed);
         
-        Vector3 deltaVec = targetPoint - charController.transform.position;
+        rb.MovePosition(transform.position+acceleration);
+
+        //Debug.Log(Vector3.Magnitude(acceleration));
+        //charController.Move(acceleration);
+        var speedRelativeToMax = Vector3.Magnitude(acceleration / maxSpeed);
+        Debug.Log(speedRelativeToMax * 100f);
+
+        var moveForward = Vector3.Dot(acceleration, rb.transform.forward);
+        var moveRight = Vector3.Dot(acceleration, rb.transform.right);
+        
+        Vector3 deltaVec = targetPoint - rb.transform.position;
         Quaternion rotation = Quaternion.LookRotation(deltaVec);
    
-        var moveSpeed = Vector3.Magnitude(move);
+        var moveSpeed = Vector3.Magnitude(acceleration);
+        //Debug.Log(moveSpeed);
 
 
         moveForward /= moveSpeed;
         moveRight /= moveSpeed;
 
-        charController.Move(move * Math.Max(sideStepSpeed, Math.Abs(moveForward)));
-
-        //Debug.Log($"f: {(moveForward * 100f).ToString("000")} r: {(moveRight * 100f).ToString("000")}");
-
-
-
-
         anim.SetFloat("SpineAngle", Mathf.Clamp(rotation.y * 100f,-45,45));
-        anim.SetFloat("Forward", moveForward);
-        anim.SetFloat("Right", -moveRight);
+        anim.SetFloat("Forward", speedRelativeToMax,0.3f,Time.deltaTime);
+       
 
 
 
     }
+
 
 
     public void StartRecordingPlan(GameObject gameObjectToRecord)
