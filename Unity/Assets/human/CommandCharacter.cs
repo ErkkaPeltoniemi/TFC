@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class CommandCharacter : MonoBehaviour
 {
-    float playerSpeed = 2f;
+    float playerSpeed = 1.55f;
+    float sideStepSpeed = 0.5f;
+    bool test = false;
     Vector3 point;
     Plane plane;
     CharacterController charController;
@@ -17,6 +19,7 @@ public class CommandCharacter : MonoBehaviour
         plane = new Plane(Vector3.up, 0);
         charController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        
 
     }
 
@@ -36,12 +39,18 @@ public class CommandCharacter : MonoBehaviour
 
     void Update()
     {
+
         var camera = Camera.main;
         var move = Vector3.zero;
 
+        var targetPoint = screenPointToWorldPoint(Input.mousePosition);
+        targetPoint.y = charController.transform.position.y;
+        //charController.transform.LookAt(targetPoint);
+        //charController.transform.rotation.Set(0f, charController.transform.rotation.y, 0f, 0f);
+
         if (Input.GetKey(KeyCode.W))
         {
-            move += camera.transform.up * Time.deltaTime* playerSpeed;        
+            move += camera.transform.up * Time.deltaTime * playerSpeed;
         }
 
         if (Input.GetKey(KeyCode.S))
@@ -58,20 +67,34 @@ public class CommandCharacter : MonoBehaviour
         }
 
         move.y = 0f;
-        charController.Move(move);
 
-        var targetPoint = screenPointToWorldPoint(Input.mousePosition);
-        targetPoint.y = charController.transform.position.y;
-        var charPos = new Vector3(charController.transform.position.x, 0f, charController.transform.position.z);
-
-        var moveSpeed = Vector3.Magnitude(move);
         var moveForward = Vector3.Dot(move, charController.transform.forward);
-        moveForward /= moveSpeed;
-        anim.SetFloat("Forward", moveForward);
+        var moveRight = Vector3.Dot(move, charController.transform.right);
+        
+        Vector3 deltaVec = targetPoint - charController.transform.position;
+        Quaternion rotation = Quaternion.LookRotation(deltaVec);
+   
+        var moveSpeed = Vector3.Magnitude(move);
 
-        charController.transform.LookAt(targetPoint);
-        charController.transform.rotation.Set(0f, charController.transform.rotation.y, 0f, 0f);
+
+        moveForward /= moveSpeed;
+        moveRight /= moveSpeed;
+
+        charController.Move(move * Math.Max(sideStepSpeed, Math.Abs(moveForward)));
+
+        //Debug.Log($"f: {(moveForward * 100f).ToString("000")} r: {(moveRight * 100f).ToString("000")}");
+
+
+
+
+        anim.SetFloat("SpineAngle", Mathf.Clamp(rotation.y * 100f,-45,45));
+        anim.SetFloat("Forward", moveForward);
+        anim.SetFloat("Right", -moveRight);
+
+
+
     }
+
 
     public void StartRecordingPlan(GameObject gameObjectToRecord)
     {
