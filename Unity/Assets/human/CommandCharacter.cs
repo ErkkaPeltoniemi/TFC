@@ -6,12 +6,16 @@ using UnityEngine;
 public class CommandCharacter : MonoBehaviour
 {
     float playerSpeed = 1.55f;
+    float playerMaxSpeed = 0.005f;
     float sideStepSpeed = 0.5f;
-    bool test = false;
     Vector3 point;
     Plane plane;
     CharacterController charController;
     Animator anim;
+
+    public float mass;
+    private Vector3 velocity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +23,7 @@ public class CommandCharacter : MonoBehaviour
         plane = new Plane(Vector3.up, 0);
         charController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        mass = 0.5f;
         
 
     }
