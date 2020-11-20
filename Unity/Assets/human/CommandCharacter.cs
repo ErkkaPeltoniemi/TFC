@@ -24,12 +24,7 @@ public class CommandCharacter : MonoBehaviour
         //charController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-  
-    
-
-
-
-}
+    }
 
     private Vector3 screenPointToWorldPoint(Vector3 screenPoint)
     {
@@ -47,14 +42,15 @@ public class CommandCharacter : MonoBehaviour
     int turns = 0;
     void Update()
     {
-
-      
         var camera = Camera.main;
-        
+
+        var mv = GetMovementInfo();
+        anim.SetFloat("FeetAngle", mv.aimingInfo.angleRelativeToBody);
+        Debug.Log($"m: {mv.moveCommandDirection} f: {mv.forwardMoveRelativeToBody} r: {mv.rightMoveRelativeToBody}, a: {mv.aimingInfo.angleToTarget}");
+
         var targetPoint = screenPointToWorldPoint(Input.mousePosition);
         targetPoint.y = rb.transform.position.y;
-        //charController.transform.LookAt(targetPoint);
-        //charController.transform.rotation.Set(0f, charController.transform.rotation.y, 0f, 0f);
+
         bool moveCommand = false;
 
         if (Input.GetKey(KeyCode.W))
@@ -118,13 +114,81 @@ public class CommandCharacter : MonoBehaviour
         moveForward /= moveSpeed;
         moveRight /= moveSpeed;
 
-        anim.SetFloat("SpineAngle", Mathf.Clamp(rotation.y * 100f,-45,45));
+        anim.SetFloat("SpineAngle", mv.aimingInfo.angleRelativeToBody);
         anim.SetFloat("Forward", speedRelativeToMax,0.3f,Time.deltaTime);
-        
-       
+    }
 
+    private Vector3 GetCurrentMoveCommand()
+    {
+        var camera = Camera.main;
+        var moveDir = Vector3.zero;
+        if (Input.GetKey(KeyCode.W))
+        {
+            moveDir += camera.transform.up;
+        }
 
+        if (Input.GetKey(KeyCode.S))
+        {
+            moveDir += -camera.transform.up;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            moveDir += camera.transform.right;
+           
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            moveDir += -camera.transform.right;
+        }
 
+        return moveDir.normalized;
+    }
+
+    private MovementInfo GetMovementInfo()
+    {
+        var moveDir = GetCurrentMoveCommand();
+
+        var moveForwardRelativeToBody = Vector3.Dot(moveDir, rb.transform.forward);
+        var moveRightRelativeToBody = Vector3.Dot(moveDir, rb.transform.right);
+
+        return new MovementInfo
+        {
+            forwardMoveRelativeToBody = moveForwardRelativeToBody,
+            rightMoveRelativeToBody = moveRightRelativeToBody,
+            moveCommandDirection = moveDir,
+            aimingInfo = GetCurrentAimingInfo()
+        };
+    }
+    
+    private AimingInfo GetCurrentAimingInfo()
+    {
+        var targetPoint = screenPointToWorldPoint(Input.mousePosition);
+        targetPoint.y = rb.transform.position.y;
+
+        Vector3 deltaVec = targetPoint - rb.transform.position;
+        Quaternion rotation = Quaternion.LookRotation(deltaVec);
+
+        float angleToTarg = Vector3.SignedAngle(rb.transform.forward, targetPoint - rb.transform.position, rb.transform.up);
+        float angleToTargWorld = Vector3.SignedAngle(rb.transform.position, targetPoint - rb.transform.position, Vector3.up);
+        return new AimingInfo
+        {
+            angleRelativeToBody = angleToTarg,
+            targetPositionInWorldCoordinates = targetPoint,
+            angleToTarget = angleToTargWorld
+        };
+    }
+    class MovementInfo
+    {
+        public Vector3 moveCommandDirection;
+        public float forwardMoveRelativeToBody;
+        public float rightMoveRelativeToBody;
+        public AimingInfo aimingInfo;
+    }
+    class AimingInfo
+    {
+        public float angleRelativeToBody;
+        public Vector3 targetPositionInWorldCoordinates;
+        public float angleToTarget;
     }
 
 
