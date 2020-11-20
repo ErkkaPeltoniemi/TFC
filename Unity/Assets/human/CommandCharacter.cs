@@ -44,8 +44,8 @@ public class CommandCharacter : MonoBehaviour
         }
         return result;
     }
-
-    void FixedUpdate()
+    int turns = 0;
+    void Update()
     {
 
       
@@ -80,8 +80,20 @@ public class CommandCharacter : MonoBehaviour
         }
         if (!moveCommand)
         {
-            acceleration *= 0.95f;
+            acceleration *= 0.90f;
         }
+        if (Input.GetKey(KeyCode.W))
+        {
+            if(Input.GetKeyDown(KeyCode.D))
+            {
+                anim.SetFloat("Horizontal", -1f);
+            }
+            
+
+        } else
+        {
+        }
+
         acceleration.y = 0f;
 
         acceleration = Vector3.ClampMagnitude(acceleration, maxSpeed);
@@ -91,7 +103,7 @@ public class CommandCharacter : MonoBehaviour
         //Debug.Log(Vector3.Magnitude(acceleration));
         //charController.Move(acceleration);
         var speedRelativeToMax = Vector3.Magnitude(acceleration / maxSpeed);
-        Debug.Log(speedRelativeToMax * 100f);
+        //Debug.Log(speedRelativeToMax * 100f);
 
         var moveForward = Vector3.Dot(acceleration, rb.transform.forward);
         var moveRight = Vector3.Dot(acceleration, rb.transform.right);
@@ -108,6 +120,7 @@ public class CommandCharacter : MonoBehaviour
 
         anim.SetFloat("SpineAngle", Mathf.Clamp(rotation.y * 100f,-45,45));
         anim.SetFloat("Forward", speedRelativeToMax,0.3f,Time.deltaTime);
+        
        
 
 
