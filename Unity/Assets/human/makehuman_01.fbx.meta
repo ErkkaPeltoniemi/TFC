@@ -44,7 +44,7 @@ ModelImporter:
     second: RotateUpperBodyLeftRight
   - first:
       74: 7440253955263280540
-    second: Game_engine|SideStepRight
+    second: SideStepRight
   - first:
       74: 6516118480001958565
     second: RotateUpperBodyLeft
@@ -103,22 +103,25 @@ ModelImporter:
       average position error 3.0 mm and maximum position error 3.0 mm at time 0:
       3 (10.0%) Frame 3\n\tRightLowerLeg average position error 1.6 mm and maximum
       position error 1.6 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report
-      for clip 'Game_engine|TurnLeftInPlace':\n\tLeftLowerLeg average position error
-      3.0 mm and maximum position error 3.0 mm at time 0:16 (80.0%) Frame 16\n\tRightLowerLeg
-      average position error 1.6 mm and maximum position error 1.6 mm at time 0:11
-      (55.0%) Frame 11\n\nRetargeting quality report for clip 'Game_engine|TurnRight45':\n\tLeftLowerLeg
-      average position error 1.5 mm and maximum position error 3.0 mm at time 0:
-      0 (0.0%) Frame 0\n\tRightLowerLeg average position error 0.5 mm and maximum
-      position error 1.6 mm at time 0: 0 (0.0%) Frame 0\n\tRightFoot average orientation
-      error 0.3 deg and maximum orientation error 1.2 deg at time 0: 9 (47.6%) Frame
-      9\n\nRetargeting quality report for clip 'Game_engine|TurnRightInPlace':\n\tLeftLowerLeg
-      average position error 3.0 mm and maximum position error 3.0 mm at time 0:
-      9 (50.0%) Frame 9\n\tRightLowerLeg average position error 1.6 mm and maximum
-      position error 1.6 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report
-      for clip 'Game_engine|Walking':\n\tLeftLowerLeg average position error 2.4
-      mm and maximum position error 15.4 mm at time 1: 4 (73.2%) Frame 29\n\tRightLowerLeg
-      average position error 0.6 mm and maximum position error 2.4 mm at time 0:
-      9 (24.4%) Frame 9\n\nRetargeting quality report for clip 'Game_engine|Walking.002':\n\tRightLowerLeg
+      for clip 'Game_engine|SideStepRight':\n\tRightLowerLeg average position error
+      0.4 mm and maximum position error 1.6 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting
+      quality report for clip 'Game_engine|TurnLeftInPlace':\n\tLeftLowerLeg average
+      position error 0.6 mm and maximum position error 3.0 mm at time 0: 0 (0.0%)
+      Frame 0\n\tRightLowerLeg average position error 1.2 mm and maximum position
+      error 2.8 mm at time 0:16 (40.0%) Frame 16\n\nRetargeting quality report for
+      clip 'Game_engine|TurnRight45':\n\tLeftLowerLeg average position error 1.5
+      mm and maximum position error 3.0 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerLeg
+      average position error 0.5 mm and maximum position error 1.6 mm at time 0:
+      0 (0.0%) Frame 0\n\tRightFoot average orientation error 0.3 deg and maximum
+      orientation error 1.2 deg at time 0: 9 (47.6%) Frame 9\n\nRetargeting quality
+      report for clip 'Game_engine|TurnRightInPlace':\n\tLeftLowerLeg average position
+      error 6.5 mm and maximum position error 10.0 mm at time 0:19 (48.8%) Frame
+      19\n\tRightLowerLeg average position error 1.2 mm and maximum position error
+      2.2 mm at time 1:14 (97.6%) Frame 39\n\nRetargeting quality report for clip
+      'Game_engine|Walking':\n\tLeftLowerLeg average position error 2.4 mm and maximum
+      position error 15.4 mm at time 1: 4 (73.2%) Frame 29\n\tRightLowerLeg average
+      position error 0.6 mm and maximum position error 2.4 mm at time 0: 9 (24.4%)
+      Frame 9\n\nRetargeting quality report for clip 'Game_engine|Walking.002':\n\tRightLowerLeg
       average position error 1.1 mm and maximum position error 1.5 mm at time 0:
       0 (0.0%) Frame 0\n\nRetargeting quality report for clip 'Empty|Action.001':\n\tRightLowerLeg
       average position error 1.5 mm and maximum position error 1.5 mm at time 0:
@@ -342,6 +345,35 @@ ModelImporter:
       keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
       heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SideStepRight
+      takeName: Game_engine|SideStepRight
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []

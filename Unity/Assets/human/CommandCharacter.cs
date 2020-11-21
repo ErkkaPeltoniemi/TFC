@@ -78,44 +78,35 @@ public class CommandCharacter : MonoBehaviour
         {
             acceleration *= 0.90f;
         }
-        if (Input.GetKey(KeyCode.W))
-        {
-            if(Input.GetKeyDown(KeyCode.D))
-            {
-                anim.SetFloat("Horizontal", -1f);
-            }
-            
-
-        } else
-        {
-        }
 
         acceleration.y = 0f;
-
         acceleration = Vector3.ClampMagnitude(acceleration, maxSpeed);
         
         rb.MovePosition(transform.position+acceleration);
 
         //Debug.Log(Vector3.Magnitude(acceleration));
         //charController.Move(acceleration);
-        var speedRelativeToMax = Vector3.Magnitude(acceleration / maxSpeed);
+        //var speedRelativeToMax = Vector3.Magnitude(acceleration / maxSpeed);
         //Debug.Log(speedRelativeToMax * 100f);
 
-        var moveForward = Vector3.Dot(acceleration, rb.transform.forward);
-        var moveRight = Vector3.Dot(acceleration, rb.transform.right);
+        //var moveForward = Vector3.Dot(acceleration, rb.transform.forward);
+        //var moveRight = Vector3.Dot(acceleration, rb.transform.right);
         
-        Vector3 deltaVec = targetPoint - rb.transform.position;
-        Quaternion rotation = Quaternion.LookRotation(deltaVec);
+        //Vector3 deltaVec = targetPoint - rb.transform.position;
+        //Quaternion rotation = Quaternion.LookRotation(deltaVec);
    
-        var moveSpeed = Vector3.Magnitude(acceleration);
+        //var moveSpeed = Vector3.Magnitude(acceleration);
         //Debug.Log(moveSpeed);
 
 
-        moveForward /= moveSpeed;
-        moveRight /= moveSpeed;
+        //moveForward /= moveSpeed;
+        //moveRight /= moveSpeed;
 
         anim.SetFloat("SpineAngle", mv.aimingInfo.angleRelativeToBody);
-        anim.SetFloat("Forward", speedRelativeToMax,0.3f,Time.deltaTime);
+        anim.SetFloat("Forward", mv.forwardMoveRelativeToBody);
+        anim.SetFloat("Right", mv.rightMoveRelativeToBody);
+        anim.SetFloat("TotalMovement", mv.forwardMoveRelativeToBody + mv.rightMoveRelativeToBody);
+
     }
 
     private Vector3 GetCurrentMoveCommand()
