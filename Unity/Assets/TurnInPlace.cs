@@ -12,6 +12,7 @@ public class TurnInPlace : StateMachineBehaviour
     {
         rb = animator.gameObject.GetComponent<Rigidbody>();
         origRotation = rb.rotation;
+
         var rotationParam = animator.GetFloat("FeetAngle");
         targetRotation = Quaternion.AngleAxis(rotationParam, rb.transform.up) * rb.rotation;    
     }

@@ -15,6 +15,7 @@ public class CommandCharacter : MonoBehaviour
     public float maxSpeed;
     public float mass;
     private Rigidbody rb;
+    private Vector3 previousMoveCommand = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class CommandCharacter : MonoBehaviour
         //charController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+
     }
 
     private Vector3 screenPointToWorldPoint(Vector3 screenPoint)
@@ -39,21 +41,32 @@ public class CommandCharacter : MonoBehaviour
         }
         return result;
     }
-    int turns = 0;
+
     void Update()
     {
         var camera = Camera.main;
         var mv = GetMovementInfo();
-        //Debug.Log($"m: {mv.moveCommandDirection} f: {mv.forwardMoveRelativeToBody} r: {mv.rightMoveRelativeToBody}, a: {mv.aimingInfo.angleToTarget}");
-        //Debug.Log(rb.velocity);
-        //rb.velocity = mv.moveCommandDirection;
-        Debug.Log(transform.position);
+
         anim.SetFloat("FeetAngle", mv.aimingInfo.angleRelativeToBody);
         anim.SetFloat("SpineAngle", mv.aimingInfo.angleRelativeToBody);
-        anim.SetFloat("Forward", mv.forwardMoveRelativeToBody);
-        anim.SetFloat("Right", mv.rightMoveRelativeToBody);
-        anim.SetFloat("TotalMovement", mv.forwardMoveRelativeToBody + mv.rightMoveRelativeToBody);
-       // Debug.Log($"g: {transform.position} r: {rb.transform.position}");
+
+        if (mv.moveCommandDirection != previousMoveCommand)
+        {
+            Debug.Log($"mv: {mv.moveCommandDirection} f: {mv.forwardMoveRelativeToBody}, r: {mv.rightMoveRelativeToBody}");
+            if (mv.moveCommandDirection == Vector3.zero)
+            {
+                anim.SetFloat("Forward", 0f, 0.05f, Time.deltaTime);
+                anim.SetFloat("Right", 0f, 0.05f, Time.deltaTime);
+            }
+            else
+            {
+                anim.SetFloat("Forward", mv.forwardMoveRelativeToBody);
+                anim.SetFloat("Right", mv.rightMoveRelativeToBody);
+            }
+            anim.SetFloat("TotalMovement", mv.forwardMoveRelativeToBody + mv.rightMoveRelativeToBody);
+        }
+
+        previousMoveCommand = mv.moveCommandDirection;
     }
 
     private Vector3 GetCurrentMoveCommand()
@@ -86,16 +99,27 @@ public class CommandCharacter : MonoBehaviour
     {
         var moveDir = GetCurrentMoveCommand();
 
-        var moveForwardRelativeToBody = Vector3.Dot(moveDir, rb.transform.forward);
-        var moveRightRelativeToBody = Vector3.Dot(moveDir, rb.transform.right);
 
-        return new MovementInfo
+        var mv = new MovementInfo
         {
-            forwardMoveRelativeToBody = moveForwardRelativeToBody,
-            rightMoveRelativeToBody = moveRightRelativeToBody,
             moveCommandDirection = moveDir,
             aimingInfo = GetCurrentAimingInfo()
         };
+
+        if (moveDir != Vector3.zero)
+        {
+            mv.forwardMoveRelativeToBody = Vector3.Dot(moveDir, rb.transform.forward); 
+            mv.rightMoveRelativeToBody = Vector3.Dot(moveDir, rb.transform.right); 
+        }else
+        {
+            mv.forwardMoveRelativeToBody = 0f;
+            mv.rightMoveRelativeToBody = 0f;
+        }
+
+        
+
+
+        return mv;
     }
     
     private AimingInfo GetCurrentAimingInfo()

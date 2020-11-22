@@ -31,7 +31,7 @@ public class Walk : StateMachineBehaviour
     {
         var f = animator.GetFloat("Forward");
         var r = animator.GetFloat("Right");
-        Debug.Log(animator.applyRootMotion);
+       
         rb.MovePosition(animator.gameObject.transform.position + animator.deltaPosition); 
 
     }
