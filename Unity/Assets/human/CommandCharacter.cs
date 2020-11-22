@@ -43,70 +43,17 @@ public class CommandCharacter : MonoBehaviour
     void Update()
     {
         var camera = Camera.main;
-
         var mv = GetMovementInfo();
+        //Debug.Log($"m: {mv.moveCommandDirection} f: {mv.forwardMoveRelativeToBody} r: {mv.rightMoveRelativeToBody}, a: {mv.aimingInfo.angleToTarget}");
+        //Debug.Log(rb.velocity);
+        //rb.velocity = mv.moveCommandDirection;
+        Debug.Log(transform.position);
         anim.SetFloat("FeetAngle", mv.aimingInfo.angleRelativeToBody);
-        Debug.Log($"m: {mv.moveCommandDirection} f: {mv.forwardMoveRelativeToBody} r: {mv.rightMoveRelativeToBody}, a: {mv.aimingInfo.angleToTarget}");
-
-        var targetPoint = screenPointToWorldPoint(Input.mousePosition);
-        targetPoint.y = rb.transform.position.y;
-
-        bool moveCommand = false;
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            acceleration +=  (camera.transform.up * Time.deltaTime * mass);
-            moveCommand = true;
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            acceleration +=  (-camera.transform.up * Time.deltaTime * mass);
-            moveCommand = true;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            acceleration += (camera.transform.right * Time.deltaTime * mass);
-            moveCommand = true;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            acceleration += (-camera.transform.right * Time.deltaTime * mass);
-            moveCommand = true;
-        }
-        if (!moveCommand)
-        {
-            acceleration *= 0.90f;
-        }
-
-        acceleration.y = 0f;
-        acceleration = Vector3.ClampMagnitude(acceleration, maxSpeed);
-        
-        rb.MovePosition(transform.position+acceleration);
-
-        //Debug.Log(Vector3.Magnitude(acceleration));
-        //charController.Move(acceleration);
-        //var speedRelativeToMax = Vector3.Magnitude(acceleration / maxSpeed);
-        //Debug.Log(speedRelativeToMax * 100f);
-
-        //var moveForward = Vector3.Dot(acceleration, rb.transform.forward);
-        //var moveRight = Vector3.Dot(acceleration, rb.transform.right);
-        
-        //Vector3 deltaVec = targetPoint - rb.transform.position;
-        //Quaternion rotation = Quaternion.LookRotation(deltaVec);
-   
-        //var moveSpeed = Vector3.Magnitude(acceleration);
-        //Debug.Log(moveSpeed);
-
-
-        //moveForward /= moveSpeed;
-        //moveRight /= moveSpeed;
-
         anim.SetFloat("SpineAngle", mv.aimingInfo.angleRelativeToBody);
         anim.SetFloat("Forward", mv.forwardMoveRelativeToBody);
         anim.SetFloat("Right", mv.rightMoveRelativeToBody);
         anim.SetFloat("TotalMovement", mv.forwardMoveRelativeToBody + mv.rightMoveRelativeToBody);
-
+       // Debug.Log($"g: {transform.position} r: {rb.transform.position}");
     }
 
     private Vector3 GetCurrentMoveCommand()
@@ -124,15 +71,15 @@ public class CommandCharacter : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))
         {
-            moveDir += camera.transform.right;
-           
+            moveDir += camera.transform.right;         
         }
         if (Input.GetKey(KeyCode.A))
         {
             moveDir += -camera.transform.right;
         }
-
+        moveDir.y = 0f;
         return moveDir.normalized;
+       
     }
 
     private MovementInfo GetMovementInfo()
