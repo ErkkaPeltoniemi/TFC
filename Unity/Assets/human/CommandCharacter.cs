@@ -46,25 +46,25 @@ public class CommandCharacter : MonoBehaviour
     {
         var camera = Camera.main;
         var mv = GetMovementInfo();
-
         anim.SetFloat("FeetAngle", mv.aimingInfo.angleRelativeToBody);
-        anim.SetFloat("SpineAngle", mv.aimingInfo.angleRelativeToBody);
 
-        if (mv.moveCommandDirection != previousMoveCommand)
+        anim.SetFloat("SpineAngle", mv.aimingInfo.angleRelativeToBody);
+        //Debug.Log(mv.aimingInfo.angleRelativeToBody);
+
+        //Debug.Log($"mv: {mv.moveCommandDirection} f: {mv.forwardMoveRelativeToBody}, r: {mv.rightMoveRelativeToBody}, a: {mv.aimingInfo.angleRelativeToVelocity}");
+        if (mv.moveCommandDirection == Vector3.zero)
         {
-            Debug.Log($"mv: {mv.moveCommandDirection} f: {mv.forwardMoveRelativeToBody}, r: {mv.rightMoveRelativeToBody}");
-            if (mv.moveCommandDirection == Vector3.zero)
-            {
-                anim.SetFloat("Forward", 0f, 0.05f, Time.deltaTime);
-                anim.SetFloat("Right", 0f, 0.05f, Time.deltaTime);
-            }
-            else
-            {
-                anim.SetFloat("Forward", mv.forwardMoveRelativeToBody);
-                anim.SetFloat("Right", mv.rightMoveRelativeToBody);
-            }
-            anim.SetFloat("TotalMovement", mv.forwardMoveRelativeToBody + mv.rightMoveRelativeToBody);
+            
+            anim.SetFloat("Forward", 0f, 0.05f, Time.deltaTime);
+            anim.SetFloat("Right", 0f, 0.05f, Time.deltaTime);
         }
+        else
+        {
+            anim.SetFloat("Forward", mv.forwardMoveRelativeToBody);
+            anim.SetFloat("Right", mv.rightMoveRelativeToBody);
+        }
+        anim.SetFloat("TotalMovement", mv.forwardMoveRelativeToBody + mv.rightMoveRelativeToBody);
+        
 
         previousMoveCommand = mv.moveCommandDirection;
     }
@@ -103,26 +103,28 @@ public class CommandCharacter : MonoBehaviour
         var mv = new MovementInfo
         {
             moveCommandDirection = moveDir,
-            aimingInfo = GetCurrentAimingInfo()
         };
+        
 
         if (moveDir != Vector3.zero)
         {
             mv.forwardMoveRelativeToBody = Vector3.Dot(moveDir, rb.transform.forward); 
-            mv.rightMoveRelativeToBody = Vector3.Dot(moveDir, rb.transform.right); 
-        }else
+            mv.rightMoveRelativeToBody = Vector3.Dot(moveDir, rb.transform.right);
+            
+        }
+        else
         {
             mv.forwardMoveRelativeToBody = 0f;
             mv.rightMoveRelativeToBody = 0f;
         }
+        mv.aimingInfo = GetCurrentAimingInfo(mv);
 
-        
 
 
         return mv;
     }
     
-    private AimingInfo GetCurrentAimingInfo()
+    private AimingInfo GetCurrentAimingInfo(MovementInfo mv)
     {
         var targetPoint = screenPointToWorldPoint(Input.mousePosition);
         targetPoint.y = rb.transform.position.y;
@@ -132,11 +134,13 @@ public class CommandCharacter : MonoBehaviour
 
         float angleToTarg = Vector3.SignedAngle(rb.transform.forward, targetPoint - rb.transform.position, rb.transform.up);
         float angleToTargWorld = Vector3.SignedAngle(rb.transform.position, targetPoint - rb.transform.position, Vector3.up);
+        float targetRelativeToVelocity = Vector3.SignedAngle(mv.moveCommandDirection, targetPoint-rb.transform.position, Vector3.up);
         return new AimingInfo
         {
             angleRelativeToBody = angleToTarg,
             targetPositionInWorldCoordinates = targetPoint,
-            angleToTarget = angleToTargWorld
+            angleToTarget = angleToTargWorld,
+            angleRelativeToVelocity = targetRelativeToVelocity
         };
     }
     class MovementInfo
@@ -151,6 +155,7 @@ public class CommandCharacter : MonoBehaviour
         public float angleRelativeToBody;
         public Vector3 targetPositionInWorldCoordinates;
         public float angleToTarget;
+        public float angleRelativeToVelocity;
     }
 
 

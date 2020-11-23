@@ -14,14 +14,20 @@ public class TurnInPlace : StateMachineBehaviour
         origRotation = rb.rotation;
 
         var rotationParam = animator.GetFloat("FeetAngle");
+        rotationParam = 45f * Mathf.Round(rotationParam / 45f);
         targetRotation = Quaternion.AngleAxis(rotationParam, rb.transform.up) * rb.rotation;    
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        var curQuat = Quaternion.Lerp(origRotation, targetRotation, stateInfo.normalizedTime); 
+
+    }
+    public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        var curQuat = Quaternion.Lerp(origRotation, targetRotation, stateInfo.normalizedTime);
         rb.MoveRotation(curQuat);
+        base.OnStateMove(animator, stateInfo, layerIndex);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -148,7 +148,7 @@ ModelImporter:
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
-      cycleOffset: 0
+      cycleOffset: 10
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
@@ -318,7 +318,7 @@ ModelImporter:
       takeName: Game_engine|SideStepRight
       internalID: 0
       firstFrame: 0
-      lastFrame: 40
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -6,11 +6,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Walk : StateMachineBehaviour
 {
-    Rigidbody rb;
+    private Rigidbody rb;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        rb = animator.gameObject.GetComponent<Rigidbody>();
+        rb = animator.gameObject.GetComponent<Rigidbody>();     
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -28,12 +29,8 @@ public class Walk : StateMachineBehaviour
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        var f = animator.GetFloat("Forward");
-        var r = animator.GetFloat("Right");
-       
-        rb.MovePosition(animator.gameObject.transform.position + animator.deltaPosition); 
-
+    { 
+        rb.MovePosition(animator.gameObject.transform.position + animator.deltaPosition);
     }
 
     // OnStateIK is called right after Animator.OnAnimatorIK()
@@ -46,7 +43,5 @@ public class Walk : StateMachineBehaviour
         animator.SetIKPositionWeight(AvatarIKGoal.RightFoot, rightFootIK);
         //var rightFootIKPos = animator.GetIKPositionWeight(AvatarIKGoal.RightFoot);
         //Debug.Log($"l: {leftFootIKPos} r: {rightFootIKPos}");
-    }
-
-    
+    }  
 }
