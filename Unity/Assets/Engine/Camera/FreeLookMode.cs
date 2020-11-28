@@ -26,11 +26,11 @@ public class FreeLookMode : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            dir += Vector3.up;
+            dir += Vector3.forward;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            dir += -Vector3.up;
+            dir += -Vector3.forward;
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -41,6 +41,6 @@ public class FreeLookMode : MonoBehaviour
             dir += Vector3.right;
         }
 
-        _camera.transform.Translate(dir * Time.deltaTime * cameraSpeed, Space.Self);
+        _camera.transform.Translate(dir * Time.deltaTime * cameraSpeed, Space.World);
     }
 }

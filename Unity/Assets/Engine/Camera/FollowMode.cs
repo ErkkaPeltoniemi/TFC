@@ -14,16 +14,19 @@ public class FollowMode : MonoBehaviour
     void Start()
     {
         _camera = this.gameObject.GetComponent<Camera>();
-
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    private void LateUpdate()
+    {
         var pos = target.transform.position + relativePosition;
         pos.y = cameraHeight;
         _camera.transform.position = pos;
+        
     }
 }
