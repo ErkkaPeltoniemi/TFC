@@ -91,58 +91,30 @@ ModelImporter:
       average position error 39.1 mm and maximum position error 39.1 mm at time 0:
       0 (0.0%) Frame 0\n\tLeftUpperArm average position error 60.6 mm and maximum
       position error 60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm average
-      position error 71.6 mm and maximum position error 71.6 mm at time 0: 0 (0.0%)
-      Frame 0\n\tLeftHand average position error 91.1 mm and maximum position error
-      91.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position error
+      position error 76.9 mm and maximum position error 76.9 mm at time 0: 0 (0.0%)
+      Frame 0\n\tLeftHand average position error 85.3 mm and maximum position error
+      85.3 mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position error
       41.1 mm and maximum position error 41.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerArm
-      average position error 41.1 mm and maximum position error 41.1 mm at time 0:
-      0 (0.0%) Frame 0\n\tRightHand average position error 43.6 mm and maximum position
-      error 43.6 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report for
-      clip 'Game_engine|Fwd':\n\tLeftLowerLeg average position error 23.6 mm and
-      maximum position error 24.0 mm at time 1: 9 (31.8%) Frame 34\n\tLeftFoot average
-      position error 17.4 mm and maximum position error 20.4 mm at time 0: 9 (9.1%)
-      Frame 9\n\tRightLowerLeg average position error 29.5 mm and maximum position
-      error 31.2 mm at time 1: 0 (22.7%) Frame 25\n\tRightFoot average position error
-      36.5 mm and maximum position error 44.5 mm at time 1: 0 (22.7%) Frame 25\n\tLeftUpperArm
-      average position error 60.6 mm and maximum position error 60.6 mm at time 2:
-      3 (49.1%) Frame 53\n\tLeftLowerArm average position error 76.2 mm and maximum
-      position error 76.5 mm at time 0: 4 (4.5%) Frame 4\n\tLeftHand average position
-      error 89.3 mm and maximum position error 89.3 mm at time 1:13 (35.5%) Frame
-      38\n\tRightUpperArm average position error 41.1 mm and maximum position error
-      41.1 mm at time 0: 2 (1.8%) Frame 2\n\tRightLowerArm average position error
-      42.1 mm and maximum position error 42.1 mm at time 4: 4 (95.5%) Frame 104\n\tRightHand
-      average position error 40.3 mm and maximum position error 40.3 mm at time 0:
-      0 (0.0%) Frame 0\n\nRetargeting quality report for clip 'Game_engine|Game_engineAction.001':\n\tLeftLowerLeg
-      average position error 30.6 mm and maximum position error 30.6 mm at time 0:
-      0 (0.0%) Frame 0\n\tLeftFoot average position error 16.1 mm and maximum position
-      error 16.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerLeg average position
-      error 30.7 mm and maximum position error 30.7 mm at time 0: 0 (0.0%) Frame
-      0\n\tRightFoot average position error 39.1 mm and maximum position error 39.1
-      mm at time 0: 0 (0.0%) Frame 0\n\tLeftUpperArm average position error 60.6
-      mm and maximum position error 60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm
-      average position error 71.6 mm and maximum position error 71.6 mm at time 0:
-      0 (0.0%) Frame 0\n\tLeftHand average position error 91.1 mm and maximum position
-      error 91.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position
-      error 41.1 mm and maximum position error 41.1 mm at time 0: 0 (0.0%) Frame
-      0\n\tRightLowerArm average position error 41.1 mm and maximum position error
-      41.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightHand average position error 43.6
-      mm and maximum position error 43.6 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting
-      quality report for clip 'Game_engine|Game_engineAction.002':\n\tLeftLowerLeg
-      average position error 30.6 mm and maximum position error 30.6 mm at time 0:
-      3 (75.0%) Frame 3\n\tLeftFoot average position error 16.1 mm and maximum position
-      error 16.1 mm at time 0: 3 (75.0%) Frame 3\n\tRightLowerLeg average position
-      error 30.7 mm and maximum position error 30.7 mm at time 0: 2 (50.0%) Frame
-      2\n\tRightFoot average position error 39.1 mm and maximum position error 39.1
-      mm at time 0: 0 (0.0%) Frame 0\n\tLeftUpperArm average position error 60.6
-      mm and maximum position error 60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm
-      average position error 71.6 mm and maximum position error 71.6 mm at time 0:
-      3 (75.0%) Frame 3\n\tLeftHand average position error 91.1 mm and maximum position
-      error 91.1 mm at time 0: 3 (75.0%) Frame 3\n\tRightUpperArm average position
-      error 41.1 mm and maximum position error 41.1 mm at time 0: 4 (100.0%) Frame
-      4\n\tRightLowerArm average position error 41.1 mm and maximum position error
-      41.1 mm at time 0: 3 (75.0%) Frame 3\n\tRightHand average position error 43.6
-      mm and maximum position error 43.6 mm at time 0: 3 (75.0%) Frame 3\n\nRetargeting
-      quality report for clip 'Game_engine|LookLeft':\n\tLeftLowerLeg average position
+      average position error 42.0 mm and maximum position error 42.0 mm at time 0:
+      0 (0.0%) Frame 0\n\tRightHand average position error 39.5 mm and maximum position
+      error 39.5 mm at time 0: 0 (0.0%) Frame 0\n\tHead average position error 53.6
+      mm and maximum position error 53.6 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting
+      quality report for clip 'Game_engine|Fwd':\n\tLeftLowerLeg average position
+      error 23.3 mm and maximum position error 23.8 mm at time 1: 9 (31.8%) Frame
+      34\n\tLeftFoot average position error 17.2 mm and maximum position error 20.3
+      mm at time 0: 9 (9.1%) Frame 9\n\tRightLowerLeg average position error 29.6
+      mm and maximum position error 31.2 mm at time 1: 0 (22.7%) Frame 25\n\tRightFoot
+      average position error 36.6 mm and maximum position error 44.6 mm at time 1:
+      0 (22.7%) Frame 25\n\tLeftUpperArm average position error 60.6 mm and maximum
+      position error 60.6 mm at time 2: 3 (49.1%) Frame 53\n\tLeftLowerArm average
+      position error 76.2 mm and maximum position error 76.5 mm at time 0: 4 (4.5%)
+      Frame 4\n\tLeftHand average position error 89.3 mm and maximum position error
+      89.3 mm at time 1:14 (36.4%) Frame 39\n\tRightUpperArm average position error
+      41.1 mm and maximum position error 41.1 mm at time 0: 2 (1.8%) Frame 2\n\tRightLowerArm
+      average position error 42.1 mm and maximum position error 42.1 mm at time 4:
+      7 (98.2%) Frame 107\n\tRightHand average position error 40.3 mm and maximum
+      position error 40.3 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report
+      for clip 'Game_engine|Game_engineAction.001':\n\tLeftLowerLeg average position
       error 30.6 mm and maximum position error 30.6 mm at time 0: 0 (0.0%) Frame
       0\n\tLeftFoot average position error 16.1 mm and maximum position error 16.1
       mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerLeg average position error 30.7
@@ -150,43 +122,79 @@ ModelImporter:
       average position error 39.1 mm and maximum position error 39.1 mm at time 0:
       0 (0.0%) Frame 0\n\tLeftUpperArm average position error 60.6 mm and maximum
       position error 60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm average
-      position error 71.6 mm and maximum position error 71.6 mm at time 0: 0 (0.0%)
-      Frame 0\n\tLeftHand average position error 91.1 mm and maximum position error
-      91.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position error
+      position error 76.9 mm and maximum position error 76.9 mm at time 0: 0 (0.0%)
+      Frame 0\n\tLeftHand average position error 85.3 mm and maximum position error
+      85.3 mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position error
       41.1 mm and maximum position error 41.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerArm
-      average position error 41.1 mm and maximum position error 41.1 mm at time 0:
-      0 (0.0%) Frame 0\n\tRightHand average position error 43.6 mm and maximum position
-      error 43.6 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report for
-      clip 'Game_engine|LookRight':\n\tLeftLowerLeg average position error 30.6 mm
-      and maximum position error 30.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftFoot
-      average position error 16.1 mm and maximum position error 16.1 mm at time 0:
-      0 (0.0%) Frame 0\n\tRightLowerLeg average position error 30.7 mm and maximum
-      position error 30.7 mm at time 0: 0 (0.0%) Frame 0\n\tRightFoot average position
-      error 39.1 mm and maximum position error 39.1 mm at time 0: 0 (0.0%) Frame
-      0\n\tLeftUpperArm average position error 60.6 mm and maximum position error
-      60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm average position error
-      71.6 mm and maximum position error 71.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftHand
-      average position error 91.1 mm and maximum position error 91.1 mm at time 0:
-      0 (0.0%) Frame 0\n\tRightUpperArm average position error 41.1 mm and maximum
-      position error 41.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerArm average
-      position error 41.1 mm and maximum position error 41.1 mm at time 0: 0 (0.0%)
-      Frame 0\n\tRightHand average position error 43.6 mm and maximum position error
-      43.6 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report for clip
-      'Game_engine|StrafeLeft':\n\tLeftLowerLeg average position error 30.6 mm and
-      maximum position error 30.6 mm at time 1: 6 (77.5%) Frame 31\n\tLeftFoot average
-      position error 16.1 mm and maximum position error 16.1 mm at time 0: 3 (7.5%)
-      Frame 3\n\tRightLowerLeg average position error 30.7 mm and maximum position
-      error 30.7 mm at time 1: 4 (75.0%) Frame 29\n\tRightFoot average position error
-      39.1 mm and maximum position error 39.1 mm at time 0: 9 (25.0%) Frame 9\n\tLeftUpperArm
-      average position error 60.6 mm and maximum position error 60.6 mm at time 0:
-      1 (2.5%) Frame 1\n\tLeftLowerArm average position error 71.6 mm and maximum
-      position error 71.6 mm at time 0: 6 (15.0%) Frame 6\n\tLeftHand average position
-      error 91.1 mm and maximum position error 91.1 mm at time 0: 6 (15.0%) Frame
-      6\n\tRightUpperArm average position error 41.1 mm and maximum position error
-      41.1 mm at time 0:16 (40.0%) Frame 16\n\tRightLowerArm average position error
-      41.1 mm and maximum position error 41.1 mm at time 0:16 (40.0%) Frame 16\n\tRightHand
-      average position error 43.6 mm and maximum position error 43.6 mm at time 1:
-      4 (75.0%) Frame 29\n\nRetargeting quality report for clip 'Game_engine|StrafeRight':\n\tLeftLowerLeg
+      average position error 42.0 mm and maximum position error 42.0 mm at time 0:
+      0 (0.0%) Frame 0\n\tRightHand average position error 39.5 mm and maximum position
+      error 39.5 mm at time 0: 0 (0.0%) Frame 0\n\tHead average position error 53.6
+      mm and maximum position error 53.6 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting
+      quality report for clip 'Game_engine|Game_engineAction.002':\n\tLeftLowerLeg
+      average position error 30.6 mm and maximum position error 30.6 mm at time 0:
+      4 (100.0%) Frame 4\n\tLeftFoot average position error 16.1 mm and maximum position
+      error 16.1 mm at time 0: 4 (100.0%) Frame 4\n\tRightLowerLeg average position
+      error 30.7 mm and maximum position error 30.7 mm at time 0: 2 (50.0%) Frame
+      2\n\tRightFoot average position error 39.1 mm and maximum position error 39.1
+      mm at time 0: 2 (50.0%) Frame 2\n\tLeftUpperArm average position error 60.6
+      mm and maximum position error 60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm
+      average position error 76.9 mm and maximum position error 76.9 mm at time 0:
+      0 (0.0%) Frame 0\n\tLeftHand average position error 85.3 mm and maximum position
+      error 85.3 mm at time 0: 4 (100.0%) Frame 4\n\tRightUpperArm average position
+      error 41.1 mm and maximum position error 41.1 mm at time 0: 1 (25.0%) Frame
+      1\n\tRightLowerArm average position error 42.0 mm and maximum position error
+      42.0 mm at time 0: 0 (0.0%) Frame 0\n\tRightHand average position error 39.5
+      mm and maximum position error 39.5 mm at time 0: 0 (0.0%) Frame 0\n\tHead average
+      position error 53.6 mm and maximum position error 53.6 mm at time 0: 0 (0.0%)
+      Frame 0\n\nRetargeting quality report for clip 'Game_engine|LookLeft':\n\tLeftLowerLeg
+      average position error 30.6 mm and maximum position error 30.6 mm at time 0:
+      0 (0.0%) Frame 0\n\tLeftFoot average position error 16.1 mm and maximum position
+      error 16.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerLeg average position
+      error 30.7 mm and maximum position error 30.7 mm at time 0: 0 (0.0%) Frame
+      0\n\tRightFoot average position error 39.1 mm and maximum position error 39.1
+      mm at time 0: 0 (0.0%) Frame 0\n\tLeftUpperArm average position error 60.6
+      mm and maximum position error 60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm
+      average position error 75.5 mm and maximum position error 75.5 mm at time 0:
+      0 (0.0%) Frame 0\n\tLeftHand average position error 91.2 mm and maximum position
+      error 91.2 mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position
+      error 41.1 mm and maximum position error 41.1 mm at time 0: 0 (0.0%) Frame
+      0\n\tRightLowerArm average position error 41.9 mm and maximum position error
+      41.9 mm at time 0: 0 (0.0%) Frame 0\n\tRightHand average position error 38.8
+      mm and maximum position error 38.8 mm at time 0: 0 (0.0%) Frame 0\n\tHead average
+      position error 53.6 mm and maximum position error 53.6 mm at time 0: 0 (0.0%)
+      Frame 0\n\nRetargeting quality report for clip 'Game_engine|LookRight':\n\tLeftLowerLeg
+      average position error 30.6 mm and maximum position error 30.6 mm at time 0:
+      0 (0.0%) Frame 0\n\tLeftFoot average position error 16.1 mm and maximum position
+      error 16.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerLeg average position
+      error 30.7 mm and maximum position error 30.7 mm at time 0: 0 (0.0%) Frame
+      0\n\tRightFoot average position error 39.1 mm and maximum position error 39.1
+      mm at time 0: 0 (0.0%) Frame 0\n\tLeftUpperArm average position error 60.6
+      mm and maximum position error 60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm
+      average position error 76.9 mm and maximum position error 76.9 mm at time 0:
+      0 (0.0%) Frame 0\n\tLeftHand average position error 85.3 mm and maximum position
+      error 85.3 mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position
+      error 41.1 mm and maximum position error 41.1 mm at time 0: 0 (0.0%) Frame
+      0\n\tRightLowerArm average position error 42.0 mm and maximum position error
+      42.0 mm at time 0: 0 (0.0%) Frame 0\n\tRightHand average position error 39.5
+      mm and maximum position error 39.5 mm at time 0: 0 (0.0%) Frame 0\n\tHead average
+      position error 53.6 mm and maximum position error 53.6 mm at time 0: 0 (0.0%)
+      Frame 0\n\nRetargeting quality report for clip 'Game_engine|StrafeLeft':\n\tLeftLowerLeg
+      average position error 23.9 mm and maximum position error 24.4 mm at time 0:
+      9 (47.6%) Frame 9\n\tLeftFoot average position error 17.0 mm and maximum position
+      error 17.6 mm at time 0: 4 (23.8%) Frame 4\n\tRightLowerLeg average position
+      error 32.5 mm and maximum position error 47.9 mm at time 0: 9 (47.6%) Frame
+      9\n\tRightFoot average position error 38.9 mm and maximum position error 39.5
+      mm at time 0: 9 (47.6%) Frame 9\n\tLeftUpperArm average position error 60.6
+      mm and maximum position error 60.6 mm at time 0: 4 (23.8%) Frame 4\n\tLeftLowerArm
+      average position error 76.9 mm and maximum position error 76.9 mm at time 0:21
+      (100.0%) Frame 21\n\tLeftHand average position error 85.3 mm and maximum position
+      error 85.3 mm at time 0: 0 (0.0%) Frame 0\n\tRightUpperArm average position
+      error 41.1 mm and maximum position error 41.1 mm at time 0: 2 (9.5%) Frame
+      2\n\tRightLowerArm average position error 42.0 mm and maximum position error
+      42.0 mm at time 0: 2 (9.5%) Frame 2\n\tRightHand average position error 39.5
+      mm and maximum position error 39.5 mm at time 0:19 (95.2%) Frame 19\n\tHead
+      average position error 53.6 mm and maximum position error 53.6 mm at time 0:
+      0 (0.0%) Frame 0\n\nRetargeting quality report for clip 'Game_engine|StrafeRight':\n\tLeftLowerLeg
       average position error 30.6 mm and maximum position error 30.6 mm at time 1:
       7 (82.5%) Frame 32\n\tLeftFoot average position error 16.1 mm and maximum position
       error 16.1 mm at time 0: 6 (15.0%) Frame 6\n\tRightLowerLeg average position
@@ -202,64 +210,70 @@ ModelImporter:
       41.1 mm at time 0:24 (60.0%) Frame 24\n\tRightHand average position error 43.6
       mm and maximum position error 43.6 mm at time 0:16 (40.0%) Frame 16\n\nRetargeting
       quality report for clip 'Game_engine|TurnLeft':\n\tLeftLowerLeg average position
-      error 30.6 mm and maximum position error 30.6 mm at time 0: 2 (33.3%) Frame
-      2\n\tLeftFoot average position error 16.1 mm and maximum position error 16.1
-      mm at time 0: 2 (33.3%) Frame 2\n\tRightLowerLeg average position error 30.7
+      error 30.6 mm and maximum position error 30.6 mm at time 0: 4 (83.3%) Frame
+      4\n\tLeftFoot average position error 16.1 mm and maximum position error 16.1
+      mm at time 0: 4 (83.3%) Frame 4\n\tRightLowerLeg average position error 30.7
       mm and maximum position error 30.7 mm at time 0: 2 (33.3%) Frame 2\n\tRightFoot
       average position error 39.1 mm and maximum position error 39.1 mm at time 0:
-      0 (0.0%) Frame 0\n\tLeftUpperArm average position error 60.6 mm and maximum
+      1 (16.7%) Frame 1\n\tLeftUpperArm average position error 60.6 mm and maximum
+      position error 60.6 mm at time 0: 4 (66.7%) Frame 4\n\tLeftLowerArm average
+      position error 76.9 mm and maximum position error 76.9 mm at time 0: 0 (0.0%)
+      Frame 0\n\tLeftHand average position error 85.3 mm and maximum position error
+      85.3 mm at time 0: 6 (100.0%) Frame 6\n\tRightUpperArm average position error
+      41.1 mm and maximum position error 41.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerArm
+      average position error 42.0 mm and maximum position error 42.0 mm at time 0:
+      0 (0.0%) Frame 0\n\tRightHand average position error 39.5 mm and maximum position
+      error 39.5 mm at time 0: 0 (0.0%) Frame 0\n\tHead average position error 53.6
+      mm and maximum position error 53.6 mm at time 0: 4 (66.7%) Frame 4\n\nRetargeting
+      quality report for clip 'Game_engine|TurnLeftStanding':\n\tLeftLowerLeg average
+      position error 30.6 mm and maximum position error 30.6 mm at time 0: 4 (83.3%)
+      Frame 4\n\tLeftFoot average position error 16.1 mm and maximum position error
+      16.1 mm at time 0: 4 (83.3%) Frame 4\n\tRightLowerLeg average position error
+      30.7 mm and maximum position error 30.7 mm at time 0: 2 (33.3%) Frame 2\n\tRightFoot
+      average position error 39.1 mm and maximum position error 39.1 mm at time 0:
+      1 (16.7%) Frame 1\n\tLeftUpperArm average position error 60.6 mm and maximum
+      position error 60.6 mm at time 0: 4 (66.7%) Frame 4\n\tLeftLowerArm average
+      position error 76.9 mm and maximum position error 76.9 mm at time 0: 0 (0.0%)
+      Frame 0\n\tLeftHand average position error 85.3 mm and maximum position error
+      85.3 mm at time 0: 6 (100.0%) Frame 6\n\tRightUpperArm average position error
+      41.1 mm and maximum position error 41.1 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerArm
+      average position error 42.0 mm and maximum position error 42.0 mm at time 0:
+      0 (0.0%) Frame 0\n\tRightHand average position error 39.5 mm and maximum position
+      error 39.5 mm at time 0: 0 (0.0%) Frame 0\n\tHead average position error 53.6
+      mm and maximum position error 53.6 mm at time 0: 4 (66.7%) Frame 4\n\nRetargeting
+      quality report for clip 'Game_engine|TurnRight':\n\tLeftLowerLeg average position
+      error 30.6 mm and maximum position error 30.6 mm at time 0: 6 (100.0%) Frame
+      6\n\tLeftFoot average position error 16.1 mm and maximum position error 16.1
+      mm at time 0: 6 (100.0%) Frame 6\n\tRightLowerLeg average position error 30.7
+      mm and maximum position error 30.7 mm at time 0: 1 (16.7%) Frame 1\n\tRightFoot
+      average position error 39.1 mm and maximum position error 39.1 mm at time 0:
+      4 (66.7%) Frame 4\n\tLeftUpperArm average position error 60.6 mm and maximum
       position error 60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm average
-      position error 71.6 mm and maximum position error 71.6 mm at time 0: 4 (66.7%)
-      Frame 4\n\tLeftHand average position error 91.1 mm and maximum position error
-      91.1 mm at time 0: 4 (66.7%) Frame 4\n\tRightUpperArm average position error
-      41.1 mm and maximum position error 41.1 mm at time 0: 6 (100.0%) Frame 6\n\tRightLowerArm
-      average position error 41.1 mm and maximum position error 41.1 mm at time 0:
-      4 (66.7%) Frame 4\n\tRightHand average position error 43.6 mm and maximum position
-      error 43.6 mm at time 0: 4 (66.7%) Frame 4\n\nRetargeting quality report for
-      clip 'Game_engine|TurnLeftStanding':\n\tLeftLowerLeg average position error
-      30.6 mm and maximum position error 30.6 mm at time 0: 2 (33.3%) Frame 2\n\tLeftFoot
-      average position error 16.1 mm and maximum position error 16.1 mm at time 0:
-      2 (33.3%) Frame 2\n\tRightLowerLeg average position error 30.7 mm and maximum
-      position error 30.7 mm at time 0: 2 (33.3%) Frame 2\n\tRightFoot average position
-      error 39.1 mm and maximum position error 39.1 mm at time 0: 0 (0.0%) Frame
-      0\n\tLeftUpperArm average position error 60.6 mm and maximum position error
-      60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm average position error
-      71.6 mm and maximum position error 71.6 mm at time 0: 4 (66.7%) Frame 4\n\tLeftHand
-      average position error 91.1 mm and maximum position error 91.1 mm at time 0:
-      4 (66.7%) Frame 4\n\tRightUpperArm average position error 41.1 mm and maximum
-      position error 41.1 mm at time 0: 6 (100.0%) Frame 6\n\tRightLowerArm average
-      position error 41.1 mm and maximum position error 41.1 mm at time 0: 4 (66.7%)
-      Frame 4\n\tRightHand average position error 43.6 mm and maximum position error
-      43.6 mm at time 0: 4 (66.7%) Frame 4\n\nRetargeting quality report for clip
-      'Game_engine|TurnRight':\n\tLeftLowerLeg average position error 30.6 mm and
-      maximum position error 30.6 mm at time 0: 3 (50.0%) Frame 3\n\tLeftFoot average
-      position error 16.1 mm and maximum position error 16.1 mm at time 0: 1 (16.7%)
-      Frame 1\n\tRightLowerLeg average position error 30.7 mm and maximum position
-      error 30.7 mm at time 0: 2 (33.3%) Frame 2\n\tRightFoot average position error
-      39.1 mm and maximum position error 39.1 mm at time 0: 2 (33.3%) Frame 2\n\tLeftUpperArm
-      average position error 60.6 mm and maximum position error 60.6 mm at time 0:
-      0 (0.0%) Frame 0\n\tLeftLowerArm average position error 71.6 mm and maximum
-      position error 71.6 mm at time 0: 6 (100.0%) Frame 6\n\tLeftHand average position
-      error 91.1 mm and maximum position error 91.1 mm at time 0: 6 (100.0%) Frame
-      6\n\tRightUpperArm average position error 41.1 mm and maximum position error
-      41.1 mm at time 0: 1 (16.7%) Frame 1\n\tRightLowerArm average position error
-      41.1 mm and maximum position error 41.1 mm at time 0: 3 (50.0%) Frame 3\n\tRightHand
-      average position error 43.6 mm and maximum position error 43.6 mm at time 0:
-      3 (50.0%) Frame 3\n\nRetargeting quality report for clip 'Game_engine|TurnRightStanding':\n\tLeftLowerLeg
+      position error 76.9 mm and maximum position error 76.9 mm at time 0: 6 (100.0%)
+      Frame 6\n\tLeftHand average position error 85.3 mm and maximum position error
+      85.3 mm at time 0: 6 (100.0%) Frame 6\n\tRightUpperArm average position error
+      41.1 mm and maximum position error 41.1 mm at time 0: 4 (66.7%) Frame 4\n\tRightLowerArm
+      average position error 42.0 mm and maximum position error 42.0 mm at time 0:
+      6 (100.0%) Frame 6\n\tRightHand average position error 39.5 mm and maximum
+      position error 39.5 mm at time 0: 0 (0.0%) Frame 0\n\tHead average position
+      error 53.6 mm and maximum position error 53.6 mm at time 0: 0 (0.0%) Frame
+      0\n\nRetargeting quality report for clip 'Game_engine|TurnRightStanding':\n\tLeftLowerLeg
       average position error 30.6 mm and maximum position error 30.6 mm at time 0:
-      3 (50.0%) Frame 3\n\tLeftFoot average position error 16.1 mm and maximum position
-      error 16.1 mm at time 0: 1 (16.7%) Frame 1\n\tRightLowerLeg average position
-      error 30.7 mm and maximum position error 30.7 mm at time 0: 2 (33.3%) Frame
-      2\n\tRightFoot average position error 39.1 mm and maximum position error 39.1
-      mm at time 0: 2 (33.3%) Frame 2\n\tLeftUpperArm average position error 60.6
+      6 (100.0%) Frame 6\n\tLeftFoot average position error 16.1 mm and maximum position
+      error 16.1 mm at time 0: 6 (100.0%) Frame 6\n\tRightLowerLeg average position
+      error 30.7 mm and maximum position error 30.7 mm at time 0: 1 (16.7%) Frame
+      1\n\tRightFoot average position error 39.1 mm and maximum position error 39.1
+      mm at time 0: 4 (66.7%) Frame 4\n\tLeftUpperArm average position error 60.6
       mm and maximum position error 60.6 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm
-      average position error 71.6 mm and maximum position error 71.6 mm at time 0:
-      6 (100.0%) Frame 6\n\tLeftHand average position error 91.1 mm and maximum position
-      error 91.1 mm at time 0: 6 (100.0%) Frame 6\n\tRightUpperArm average position
-      error 41.1 mm and maximum position error 41.1 mm at time 0: 1 (16.7%) Frame
-      1\n\tRightLowerArm average position error 41.1 mm and maximum position error
-      41.1 mm at time 0: 3 (50.0%) Frame 3\n\tRightHand average position error 43.6
-      mm and maximum position error 43.6 mm at time 0: 3 (50.0%) Frame 3\n"
+      average position error 76.9 mm and maximum position error 76.9 mm at time 0:
+      6 (100.0%) Frame 6\n\tLeftHand average position error 85.3 mm and maximum position
+      error 85.3 mm at time 0: 6 (100.0%) Frame 6\n\tRightUpperArm average position
+      error 41.1 mm and maximum position error 41.1 mm at time 0: 4 (66.7%) Frame
+      4\n\tRightLowerArm average position error 42.0 mm and maximum position error
+      42.0 mm at time 0: 6 (100.0%) Frame 6\n\tRightHand average position error 39.5
+      mm and maximum position error 39.5 mm at time 0: 0 (0.0%) Frame 0\n\tHead average
+      position error 53.6 mm and maximum position error 53.6 mm at time 0: 0 (0.0%)
+      Frame 0\n"
     animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
@@ -479,7 +493,7 @@ ModelImporter:
       takeName: Game_engine|StrafeLeft
       internalID: 0
       firstFrame: 0
-      lastFrame: 50
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
