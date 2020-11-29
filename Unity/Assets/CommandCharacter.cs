@@ -59,7 +59,7 @@ public class CommandCharacter : MonoBehaviour
         anim.SetFloat("SpineAngle", mv.aimingInfo.angleRelativeToBody);
         //Debug.Log(mv.aimingInfo.angleRelativeToBody);
         //Debug.Log(rb.velocity);
-        Debug.Log($"mv: {mv.moveCommandDirection} f: {mv.forwardMoveRelativeToBody}, r: {mv.rightMoveRelativeToBody}, a: {mv.targetRelativeToMovementDir}");
+        Debug.Log($"mv: {mv.moveCommandDirection} f: {mv.forwardMoveRelativeToTarget}, r: {mv.rightMoveRelativeToTarget}, tm: {mv.forwardMoveRelativeToBody}");
         //Debug.Log(rb.transform.forward);
         if (mv.moveCommandDirection == Vector3.zero)
         {
@@ -69,11 +69,16 @@ public class CommandCharacter : MonoBehaviour
         }
         else
         {
-            anim.SetFloat("Forward", mv.forwardMoveRelativeToBody, 0.1f, Time.deltaTime);
-            anim.SetFloat("Right", mv.rightMoveRelativeToBody, 0.1f, Time.deltaTime);
+            anim.SetFloat("Forward", mv.forwardMoveRelativeToTarget, 0.1f, Time.deltaTime);
+            anim.SetFloat("Right", mv.rightMoveRelativeToTarget, 0.1f, Time.deltaTime);
+
+            anim.SetFloat("ForwardBody", mv.forwardMoveRelativeToBody, 0.1f, Time.deltaTime);
+            anim.SetFloat("RightBody", mv.rightMoveRelativeToBody, 0.1f, Time.deltaTime);
         }
         anim.SetFloat("TargetRelativeToMvm", mv.targetRelativeToMovementDir);
-        anim.SetFloat("TotalMovement", Mathf.Abs(mv.forwardMoveRelativeToBody) + Math.Abs(mv.rightMoveRelativeToBody));
+        anim.SetFloat("TotalMovement", mv.totalMovement);
+        anim.SetFloat("TotalMovementStrafe", mv.strafeTotal);
+        anim.SetFloat("FwdBwdAbs", mv.fwdBwdAbs);
         //Debug.Log("TotalMovement: "+ mv.forwardMoveRelativeToBody + mv.rightMoveRelativeToBody);
     }
 
@@ -117,9 +122,18 @@ public class CommandCharacter : MonoBehaviour
 
         var fromChartoTarget =  mv.aimingInfo.targetPositionInWorldCoordinates- rb.position;
         fromChartoTarget.Normalize();
-        mv.forwardMoveRelativeToBody = Vector3.Dot(fromChartoTarget, rb.transform.forward);
-        mv.rightMoveRelativeToBody = Vector3.Dot(fromChartoTarget, rb.transform.right);
+
+        mv.forwardMoveRelativeToTarget = Vector3.Dot(fromChartoTarget, rb.transform.forward);
+        mv.rightMoveRelativeToTarget = Vector3.Dot(fromChartoTarget, rb.transform.right);
+        
+        mv.forwardMoveRelativeToBody = Vector3.Dot(moveDir, rb.transform.forward);
+        mv.rightMoveRelativeToBody = Vector3.Dot(moveDir, rb.transform.right);
+
         mv.targetRelativeToMovementDir = Vector3.Dot(fromChartoTarget, moveDir);
+
+        mv.strafeTotal = Mathf.Abs(mv.rightMoveRelativeToBody);
+        mv.totalMovement = Mathf.Abs(mv.forwardMoveRelativeToBody) + Math.Abs(mv.rightMoveRelativeToBody);
+        mv.fwdBwdAbs = Mathf.Abs(mv.forwardMoveRelativeToBody);
 
 
         return mv;
@@ -136,6 +150,7 @@ public class CommandCharacter : MonoBehaviour
         float angleToTarg = Vector3.SignedAngle(rb.transform.forward, targetPoint - rb.transform.position, rb.transform.up);
         float angleToTargWorld = Vector3.SignedAngle(rb.transform.position, targetPoint - rb.transform.position, Vector3.up);
         float targetRelativeToVelocity = Vector3.SignedAngle(mv.moveCommandDirection, targetPoint-rb.transform.position, Vector3.up);
+
         return new AimingInfo
         {
             angleRelativeToBody = angleToTarg,
@@ -147,9 +162,14 @@ public class CommandCharacter : MonoBehaviour
     class MovementInfo
     {
         public Vector3 moveCommandDirection;
+        public float forwardMoveRelativeToTarget;
+        public float rightMoveRelativeToTarget;
         public float forwardMoveRelativeToBody;
         public float rightMoveRelativeToBody;
         public float targetRelativeToMovementDir;
+        public float strafeTotal;
+        public float totalMovement;
+        public float fwdBwdAbs;
         public AimingInfo aimingInfo;
     }
     class AimingInfo
