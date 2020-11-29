@@ -24,6 +24,21 @@ ModelImporter:
   - first:
       74: -7810238981436904486
     second: Game_engine|LookRight
+  - first:
+      74: -71038352940947223
+    second: Game_engine|TurnRight (1)
+  - first:
+      74: -837455721352546334
+    second: Game_engine|TurnLeft
+  - first:
+      74: 6693120848659194774
+    second: Game_engine|StrafeRight
+  - first:
+      74: -6182895618689823908
+    second: Game_engine|StrafeRight (1)
+  - first:
+      74: -563382373810972737
+    second: Game_engine|StrafeLeft
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -45,38 +60,42 @@ ModelImporter:
       0 (0.0%) Frame 0\n\tRightLowerLeg average position error 5.9 mm and maximum
       position error 5.9 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report
       for clip 'Game_engine|Fwd':\n\tLeftLowerLeg average position error 5.9 mm and
-      maximum position error 5.9 mm at time 1:19 (91.8%) Frame 44\n\tRightLowerLeg
-      average position error 5.9 mm and maximum position error 5.9 mm at time 1:22
-      (98.0%) Frame 47\n\nRetargeting quality report for clip 'Game_engine|Game_engineAction':\n\tLeftLowerLeg
+      maximum position error 5.9 mm at time 0:24 (61.5%) Frame 24\n\tRightLowerLeg
+      average position error 5.9 mm and maximum position error 5.9 mm at time 0:24
+      (61.5%) Frame 24\n\nRetargeting quality report for clip 'Game_engine|Game_engineAction.001':\n\tLeftLowerLeg
       average position error 5.9 mm and maximum position error 5.9 mm at time 0:
       0 (0.0%) Frame 0\n\tRightLowerLeg average position error 5.9 mm and maximum
       position error 5.9 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report
-      for clip 'Game_engine|Game_engineAction.001':\n\tLeftLowerLeg average position
-      error 5.9 mm and maximum position error 5.9 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerLeg
+      for clip 'Game_engine|Game_engineAction.002':\n\tLeftLowerLeg average position
+      error 5.9 mm and maximum position error 5.9 mm at time 0: 3 (75.0%) Frame 3\n\tRightLowerLeg
       average position error 5.9 mm and maximum position error 5.9 mm at time 0:
-      0 (0.0%) Frame 0\n\nRetargeting quality report for clip 'Game_engine|Game_engineAction.002':\n\tLeftLowerLeg
+      4 (100.0%) Frame 4\n\nRetargeting quality report for clip 'Game_engine|LookLeft':\n\tLeftLowerLeg
       average position error 5.9 mm and maximum position error 5.9 mm at time 0:
-      3 (75.0%) Frame 3\n\tRightLowerLeg average position error 5.9 mm and maximum
-      position error 5.9 mm at time 0: 1 (25.0%) Frame 1\n\nRetargeting quality report
-      for clip 'Game_engine|LookLeft':\n\tLeftLowerLeg average position error 5.9
+      0 (0.0%) Frame 0\n\tRightLowerLeg average position error 5.9 mm and maximum
+      position error 5.9 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report
+      for clip 'Game_engine|LookRight':\n\tLeftLowerLeg average position error 5.9
       mm and maximum position error 5.9 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerLeg
       average position error 5.9 mm and maximum position error 5.9 mm at time 0:
-      0 (0.0%) Frame 0\n\nRetargeting quality report for clip 'Game_engine|LookRight':\n\tLeftLowerLeg
-      average position error 5.9 mm and maximum position error 5.9 mm at time 0:
-      0 (0.0%) Frame 0\n\tRightLowerLeg average position error 5.9 mm and maximum
-      position error 5.9 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report
-      for clip 'Game_engine|Turn':\n\tLeftLowerLeg average position error 5.9 mm
-      and maximum position error 5.9 mm at time 1:22 (96.0%) Frame 47\n\tRightLowerLeg
+      0 (0.0%) Frame 0\n\nRetargeting quality report for clip 'Game_engine|StrafeLeft':\n\tLeftLowerLeg
       average position error 5.9 mm and maximum position error 5.9 mm at time 1:22
-      (94.0%) Frame 47\n\nRetargeting quality report for clip 'Game_engine|TurnRight':\n\tLeftLowerLeg
+      (94.0%) Frame 47\n\tRightLowerLeg average position error 5.9 mm and maximum
+      position error 5.9 mm at time 1: 4 (60.0%) Frame 29\n\nRetargeting quality
+      report for clip 'Game_engine|StrafeRight':\n\tLeftLowerLeg average position
+      error 5.9 mm and maximum position error 5.9 mm at time 1:22 (96.0%) Frame 47\n\tRightLowerLeg
+      average position error 5.9 mm and maximum position error 5.9 mm at time 1:22
+      (94.0%) Frame 47\n\nRetargeting quality report for clip 'Game_engine|TurnLeft':\n\tLeftLowerLeg
       average position error 5.9 mm and maximum position error 5.9 mm at time 0:
-      3 (75.0%) Frame 3\n\tRightLowerLeg average position error 5.9 mm and maximum
-      position error 5.9 mm at time 0: 1 (25.0%) Frame 1\n"
+      1 (16.7%) Frame 1\n\tRightLowerLeg average position error 5.9 mm and maximum
+      position error 5.9 mm at time 0: 6 (100.0%) Frame 6\n\nRetargeting quality
+      report for clip 'Game_engine|TurnRight':\n\tLeftLowerLeg average position error
+      5.9 mm and maximum position error 5.9 mm at time 0: 3 (50.0%) Frame 3\n\tRightLowerLeg
+      average position error 5.9 mm and maximum position error 5.9 mm at time 0:
+      4 (83.3%) Frame 4\n"
     animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
     animationCompression: 0
-    animationRotationError: 0.5
+    animationRotationError: 0.01
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
@@ -113,8 +132,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Game_engine|Turn
-      takeName: Game_engine|Turn
+      name: Game_engine|StrafeRight
+      takeName: Game_engine|StrafeRight
       internalID: 0
       firstFrame: 0
       lastFrame: 50
@@ -175,7 +194,7 @@ ModelImporter:
       takeName: Game_engine|TurnRight
       internalID: 0
       firstFrame: 0
-      lastFrame: 4
+      lastFrame: 6
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -241,6 +260,64 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Game_engine|TurnLeft
+      takeName: Game_engine|TurnLeft
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Game_engine|StrafeLeft
+      takeName: Game_engine|StrafeLeft
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
