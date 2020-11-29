@@ -64,13 +64,13 @@ public class CommandCharacter : MonoBehaviour
         if (mv.moveCommandDirection == Vector3.zero)
         {
             
-            anim.SetFloat("Forward", 0f, 0.1f, Time.deltaTime);
-            anim.SetFloat("Right", 0f, 0.1f, Time.deltaTime);
+            anim.SetFloat("Forward", 0f, 0.15f, Time.deltaTime);
+            anim.SetFloat("Right", 0f, 0.15f, Time.deltaTime);
         }
         else
         {
-            anim.SetFloat("Forward", mv.forwardMoveRelativeToTarget, 0.1f, Time.deltaTime);
-            anim.SetFloat("Right", mv.rightMoveRelativeToTarget, 0.1f, Time.deltaTime);
+            anim.SetFloat("Forward", mv.forwardMoveRelativeToTarget, 0.01f, Time.deltaTime);
+            anim.SetFloat("Right", mv.rightMoveRelativeToTarget, 0.01f, Time.deltaTime);
 
             anim.SetFloat("ForwardBody", mv.forwardMoveRelativeToBody, 0.1f, Time.deltaTime);
             anim.SetFloat("RightBody", mv.rightMoveRelativeToBody, 0.1f, Time.deltaTime);
